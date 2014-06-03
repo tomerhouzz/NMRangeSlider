@@ -28,7 +28,6 @@ NSUInteger DeviceSystemMajorVersion() {
     float _lowerTouchOffset;
     float _upperTouchOffset;
     float _stepValueInternal;
-    BOOL _haveAddedSubviews;
 }
 
 @property (retain, nonatomic) UIImageView* lowerHandle;
@@ -79,6 +78,8 @@ NSUInteger DeviceSystemMajorVersion() {
 
 - (void) configureView
 {
+    [self addSubviews];
+
     //Setup the default values
     _minimumValue = 0.0;
     _maximumValue = 1.0;
@@ -495,18 +496,17 @@ NSUInteger DeviceSystemMajorVersion() {
     //------------------------------
     // Track
     self.track = [[UIImageView alloc] initWithImage:[self trackImageForCurrentValues]];
-    self.track.frame = [self trackRect];
-    
+
     //------------------------------
     // Lower Handle Handle
     self.lowerHandle = [[UIImageView alloc] initWithImage:self.lowerHandleImageNormal highlightedImage:self.lowerHandleImageHighlighted];
-    self.lowerHandle.frame = [self thumbRectForValue:_lowerValue image:self.lowerHandleImageNormal];
-    
+//    self.lowerHandle.frame = [self thumbRectForValue:_lowerValue image:self.lowerHandleImageNormal];
+
     //------------------------------
     // Upper Handle Handle
     self.upperHandle = [[UIImageView alloc] initWithImage:self.upperHandleImageNormal highlightedImage:self.upperHandleImageHighlighted];
-    self.upperHandle.frame = [self thumbRectForValue:_upperValue image:self.upperHandleImageNormal];
-    
+//    self.upperHandle.frame = [self thumbRectForValue:_upperValue image:self.upperHandleImageNormal];
+
     [self addSubview:self.trackBackground];
     [self addSubview:self.track];
     [self addSubview:self.lowerHandle];
@@ -516,12 +516,6 @@ NSUInteger DeviceSystemMajorVersion() {
 
 -(void)layoutSubviews
 {
-    if(_haveAddedSubviews==NO)
-    {
-        _haveAddedSubviews=YES;
-        [self addSubviews];
-    }
-    
     if(_lowerHandleHidden)
     {
         _lowerValue = _minimumValue;
