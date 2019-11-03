@@ -231,13 +231,13 @@ NSUInteger DeviceSystemMajorVersion() {
     {
         if(IS_PRE_IOS7())
         {
-            UIImage* image = [UIImage imageNamed:@"slider-default-trackBackground"];
+            UIImage* image = [UIImage imageNamed:@"slider-default-trackBackground" inBundle:[NSBundle bundleWithIdentifier:@"com.houzz.app.HouzzKit"] compatibleWithTraitCollection:nil];
             image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0.0, 5.0, 0.0, 5.0)];
             _trackBackgroundImage = image;
         }
         else
         {
-            UIImage* image = [UIImage imageNamed:@"slider-default7-trackBackground"];
+            UIImage* image = [UIImage imageNamed:@"slider-default7-trackBackground" inBundle:[NSBundle bundleWithIdentifier:@"com.houzz.app.HouzzKit"] compatibleWithTraitCollection:nil];
             image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0.0, 2.0, 0.0, 2.0)];
             _trackBackgroundImage = image;
         }
@@ -252,14 +252,14 @@ NSUInteger DeviceSystemMajorVersion() {
     {
         if(IS_PRE_IOS7())
         {
-            UIImage* image = [UIImage imageNamed:@"slider-default-track"];
+            UIImage* image = [UIImage imageNamed:@"slider-default-track" inBundle:[NSBundle bundleWithIdentifier:@"com.houzz.app.HouzzKit"] compatibleWithTraitCollection:nil];
             image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0.0, 7.0, 0.0, 7.0)];
             _trackImage = image;
         }
         else
         {
             
-            UIImage* image = [UIImage imageNamed:@"slider-default7-track"];
+            UIImage* image = [UIImage imageNamed:@"slider-default7-track" inBundle:[NSBundle bundleWithIdentifier:@"com.houzz.app.HouzzKit"] compatibleWithTraitCollection:nil];
             image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0.0, 2.0, 0.0, 2.0)];
             image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
             _trackImage = image;
@@ -276,13 +276,13 @@ NSUInteger DeviceSystemMajorVersion() {
     {
         if(IS_PRE_IOS7())
         {
-            UIImage* image = [UIImage imageNamed:@"slider-default-trackCrossedOver"];
+            UIImage* image = [UIImage imageNamed:@"slider-default-trackCrossedOver" inBundle:[NSBundle bundleWithIdentifier:@"com.houzz.app.HouzzKit"] compatibleWithTraitCollection:nil];
             image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0.0, 7.0, 0.0, 7.0)];
             _trackCrossedOverImage = image;
         }
         else
         {
-            UIImage* image = [UIImage imageNamed:@"slider-default7-trackCrossedOver"];
+            UIImage* image = [UIImage imageNamed:@"slider-default7-trackCrossedOver" inBundle:[NSBundle bundleWithIdentifier:@"com.houzz.app.HouzzKit"] compatibleWithTraitCollection:nil];
             image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0.0, 2.0, 0.0, 2.0)];
             _trackCrossedOverImage = image;
         }
@@ -297,12 +297,12 @@ NSUInteger DeviceSystemMajorVersion() {
     {
         if(IS_PRE_IOS7())
         {
-            UIImage* image = [UIImage imageNamed:@"slider-default-handle"];
+            UIImage* image = [UIImage imageNamed:@"slider-default-handle" inBundle:[NSBundle bundleWithIdentifier:@"com.houzz.app.HouzzKit"] compatibleWithTraitCollection:nil];
             _lowerHandleImageNormal = image;
         }
         else
         {
-            UIImage* image = [UIImage imageNamed:@"slider-default7-handle"];
+            UIImage* image = [UIImage imageNamed:@"slider-default7-handle" inBundle:[NSBundle bundleWithIdentifier:@"com.houzz.app.HouzzKit"] compatibleWithTraitCollection:nil];
             _lowerHandleImageNormal = image;
         }
 
@@ -317,12 +317,12 @@ NSUInteger DeviceSystemMajorVersion() {
     {
         if(IS_PRE_IOS7())
         {
-            UIImage* image = [UIImage imageNamed:@"slider-default-handle-highlighted"];
+            UIImage* image = [UIImage imageNamed:@"slider-default-handle-highlighted" inBundle:[NSBundle bundleWithIdentifier:@"com.houzz.app.HouzzKit"] compatibleWithTraitCollection:nil];
             _lowerHandleImageHighlighted = image;
         }
         else
         {
-            UIImage* image = [UIImage imageNamed:@"slider-default7-handle"];
+            UIImage* image = [UIImage imageNamed:@"slider-default7-handle" inBundle:[NSBundle bundleWithIdentifier:@"com.houzz.app.HouzzKit"] compatibleWithTraitCollection:nil];
             _lowerHandleImageNormal = image;
         }
     }
@@ -336,12 +336,12 @@ NSUInteger DeviceSystemMajorVersion() {
     {
         if(IS_PRE_IOS7())
         {
-            UIImage* image = [UIImage imageNamed:@"slider-default-handle"];
+            UIImage* image = [UIImage imageNamed:@"slider-default-handle" inBundle:[NSBundle bundleWithIdentifier:@"com.houzz.app.HouzzKit"] compatibleWithTraitCollection:nil];
             _upperHandleImageNormal = image;
         }
         else
         {
-            UIImage* image = [UIImage imageNamed:@"slider-default7-handle"];
+            UIImage* image = [UIImage imageNamed:@"slider-default7-handle" inBundle:[NSBundle bundleWithIdentifier:@"com.houzz.app.HouzzKit"] compatibleWithTraitCollection:nil];
             _upperHandleImageNormal = image;
         }
     }
@@ -355,12 +355,12 @@ NSUInteger DeviceSystemMajorVersion() {
     {
         if(IS_PRE_IOS7())
         {
-            UIImage* image = [UIImage imageNamed:@"slider-default-handle-highlighted"];
+            UIImage* image = [UIImage imageNamed:@"slider-default-handle-highlighted" inBundle:[NSBundle bundleWithIdentifier:@"com.houzz.app.HouzzKit"] compatibleWithTraitCollection:nil];
             _upperHandleImageHighlighted = image;
         }
         else
         {
-            UIImage* image = [UIImage imageNamed:@"slider-default7-handle"];
+            UIImage* image = [UIImage imageNamed:@"slider-default7-handle" inBundle:[NSBundle bundleWithIdentifier:@"com.houzz.app.HouzzKit"] compatibleWithTraitCollection:nil];
             _upperHandleImageNormal = image;
         }
     }
